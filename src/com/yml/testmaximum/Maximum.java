@@ -2,23 +2,6 @@ package com.yml.testmaximum;
 
 public class Maximum {
 	
-	
-	/**
-	 *  
-	 * @method to find the maximum of 3 integers
-	 * 
-	 */
-	public void maximumInteger(Integer x, Integer y, Integer z) {
-		Integer max = x;
-		if(y.compareTo(max)>0) {
-			max = y;
-		}
-		if(z.compareTo(max)>0){
-			max = z;
-		}
-		
-		printIntegerMax(x,y,z,max);
-	}
 
 	/**
 	 *  
@@ -82,4 +65,19 @@ public class Maximum {
 		System.out.println("Max of "+x+", "+y+", "+z+" is "+max);
 		
 	}
+	
+	public static <T extends Comparable<T>> void maximum(T x, T y, T z) {
+		T max = x;
+		if(y.compareTo(max)>0) {
+			max = y;
+		}
+		if(z.compareTo(max)>0) {
+			max = z;
+		}
+		
+		System.out.println("Max of "+x+", "+y+", "+z+" is "+max);
+		
+	}
+	
+	
 }
