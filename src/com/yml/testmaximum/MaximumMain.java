@@ -8,11 +8,12 @@ public class MaximumMain {
 		Float a = 40f, b = 80f, c = 60f;
 		String i = "Dairymilk", j = "FiveStar", k = "Mars";
 		
-		//Calling static method maximum() of generic type
-		
-		Maximum.maximum(x, y, z); //test case 1 of type Integer
-		Maximum.maximum(a, b, c); //test case 2 of type Float
-		Maximum.maximum(i, j, k); //test case 3 of type String
+		/*initialising variables using constructor of generic class and calling testMaximum() method which
+		 *calls the static method maximum() internally
+		 */
+		new Maximum<Integer>(x, y, z).testMaximum(); //test case 1 of type Integer
+		new Maximum<Float>(a, b, c).testMaximum(); //test case 2 of type Float
+		new Maximum<String>(i, j, k).testMaximum(); //test case 3 of type String
 	}
 
 }
