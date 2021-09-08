@@ -4,13 +4,15 @@ public class MaximumMain {
 
 	public static void main(String[] args) {
 		
-		String x = "Peach", y = "Banana", z = "Apple";
-		String a = "Cat", b = "Dog", c = "Buffalo";
+		Integer x = 100, y = 50, z = 60;
+		Float a = 40f, b = 80f, c = 60f;
 		String i = "Dairymilk", j = "FiveStar", k = "Mars";
 		
-		new Maximum().maximumString(x, y, z); //test case 1
-		new Maximum().maximumString(a, b, c); //test case 2
-		new Maximum().maximumString(i, j, k); //test case 3
+		//Calling static method maximum() of generic type
+		
+		Maximum.maximum(x, y, z); //test case 1 of type Integer
+		Maximum.maximum(a, b, c); //test case 2 of type Float
+		Maximum.maximum(i, j, k); //test case 3 of type String
 	}
 
 }
