@@ -11,7 +11,7 @@ public class MaximumMain {
 		/*initialising variables using constructor of generic class and calling testMaximum() method which
 		 *calls the static method maximum() internally
 		 */
-		new Maximum<Integer>().testMaximum(x, y, z, 200); //test case 1 of type Integer
+		new Maximum<Integer>().testMaximum(x, y, z, 10); //test case 1 of type Integer
 		new Maximum<Float>().testMaximum(a, b, c, 350f); //test case 2 of type Float
 		new Maximum<String>().testMaximum(i, j, k, "Perk"); //test case 3 of type String
 	}
