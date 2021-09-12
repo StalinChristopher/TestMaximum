@@ -18,11 +18,6 @@ public class Maximum<T extends Comparable<T>> {
 	 * String builder is used to append the string
 	 */
 	public static <T extends Comparable<T>> void maximum(List<T> paramList ) {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Max of ");
-		for(T value : paramList) {
-			builder.append(value+",  ");
-		}
 		int n = paramList.size();
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < n-i-1; j++) {
@@ -34,8 +29,17 @@ public class Maximum<T extends Comparable<T>> {
 			}
 		}
 		T max = paramList.get(n-1);
+		printMax(paramList,max);
+		
+	}
+	
+	public static <T> void printMax(List<T> paramList, T max) {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Max of ");
+		for(T value : paramList) {
+			builder.append(value+",  ");
+		}
 		builder.append(" is "+max);
 		System.out.println(builder);
-		
-	}	
+	}
 }
